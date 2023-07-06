@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariyo Aresa | Portfolio</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: aliceblue;
+            overflow-x: hidden;
+        }
+        #top{
+            height: 100vh;
+            background: url(background.jpg);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+        #intro{
+            padding: 30px;
+        }
+        #element{
+            color: red;
+        }
+        #intro h1{
+            text-shadow: #000;
+        }
+        #intro p{
+            font-size: 16px;
+            font-family: cursive;
+        }
+        #intro a button{
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #image{
+            justify-content: end;
+            align-items: center;
+            display: flex;
+            padding: 10px;
+        }
+        #image img{
+            width: 25rem;
+            height: 25rem;
+            object-fit: cover;
+            border-radius: 8px;
+            image-resolution: 4196px;
+            box-shadow: black;
+            animation: move 1s infinite;
+        }
+        @keyframes move {
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(3px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        #icons{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        #icons a{
+            text-decoration: none;
+            color: #333;
+            font-size: 30px;
+        }
+        table{
+            background-color: #ccc;
+            padding: 20px;
+        }
+        table tr td ion-icon{
+            align-self: center;
+            font-size: 30px;
+            
+        }
+        #projecta{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 50px;
+            padding: 20px;
+        }
+        #projects h1{
+            text-align: center;
+            padding: 5px;
+        }
+        #project1{
+            text-decoration: none;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            background-color: #ccc;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+        #project1 h3{
+            text-shadow: 10px 10px 7px black;
+        }
+        #project1 span{
+            width: 150px;
+            height: 150px;
+            margin: 1rem;
+        }
+        #project1 img{
+            width: 100%;
+            height: 100%;
+            transition: ease-in-out .3s;
+            pointer-events: none;
+        }
+        #project1 img:hover{
+            transform: scale(1.1);
+        }
+        #project1 label{
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            text-align: center;
+            font-family: cursive;
+        }
+        form{
+            padding: 50px;
+        }
+        form h2{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        input, textarea{
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: solid 1px #ccc;
+            font-family: cursive;
+        }
+        textarea{
+            height: 100px;
+            resize: none;
+        }
+        ::placeholder{
+            font-family: cursive;
+        }
+        textarea::placeholder{
+            font-size: 16px;
+        }
+        input[type="submit"]{
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #333; /* set the background color to a dark grey */
+            color: #fff; /* set the text color to white */
+        }
+
+        footer p {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .social-media-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 24px;
+            color: #fff; /* set the color to white */
+        }
+
+        .social-media-icons a:hover {
+        color: #007bff; /* set the hover color to a shade of blue */
+        }
+        @media(max-width: 790px) {
+            #top{
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+                padding: 10px;
+            }
+            #projecta{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        
+    </nav>
+    <main>
+        <div id="top">
+            <div id="intro">
+                <h1>Hi, I'm Ariyo Aresa</h1>
+                <h1>A <span id="element">Website developer,</span></h1>
+                <p>Ariyo Aresa is the CEO and executive founder of Ariz Tech, an organisation that specializes in website development and graphic designs. <br>I have worked with diverse industries ranging from technology to fashion, e-commerce and many more.</p>
+                <div id="icons">
+                    <a href="https://facebook.com/ifadara.olatunjiaresa" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://github.com/ariyoaresa" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="https://youtube.com/@Ariz-Tech" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+                    <a href="https://stackoverflow.com/users/22077976/ariz-tech" target="_blank"><ion-icon name="logo-stackoverflow"></ion-icon></a>
+                </div>
+                <a href="#contact"><button>Contact Me</button></a>
+            </div>
+        </div>
+        <div id="projects">
+            <h1>My Projects</h1>
+            <h2>Website Development</h2>
+            <div id="projecta">
+                <a href="https://ariyoaresa.github.io" target="_blank" id="project1">
+                    <h3>NowBuy</h3>
+                    <span><img src="NowBuy Logo.png" alt="project1img" id="project1img" width=""></span><br>
+                    <label>Your one-stop-shop for all your needs</label>
+                </a>
+                <a href="https://ariyoaresa.github.io/ile-aresa" target="_blank" id="project1">
+                    <h3>Ile- Aresa International</h3>
+                    <span><img src="ile-aresa.jpg" alt="project1img" id="project1img"></span><br>
+                    <label>Ile Aresa Intrenational is a vibrant and inclusive community dedicated to fostering spiritual growth, promoting compassion, and spreading love through Ifa</label>
+                </a>
+                <a href="https://ariyoaresa.github.io/arizgpt" target="_blank" id="project1">
+                    <h3>ArizGPT</h3>
+                    <span><img src="arizgpt.png" alt="project1img" id="project1img"></span><br>
+                    <label>Experience the power of ArizGPT, the artificial intelligence language model that can imitate the writing style of public figures such as actors, politicians and authors.</label>
+                </a>
+                <a href="https://ariyoaresa.github.io/weather" target="_blank" id="project1">
+                    <h3>Weather App</h3>
+                    <span><img src="weather.jpg" alt="project1img" id="project1img"></span><br>
+                    <label>Check current weather condition for any city in the world.</label>
+                </a>
+                <a href="https://ariyoaresa.github.io/tictactoe" target="_blank" id="project1">
+                    <h3>Multiplayer Tic-Tac-Toe</h3>
+                    <span><img src="tic.png" alt="project1img" id="project1img"></span><br>
+                    <label>Challenge your friends in this classic game of Xs and Os. Take turns placing your marks on the grid, aiming to create a winning line vertically, horizontally, or diagonally.</label>
+                </a>
+                <a href="https://ariyoaresa.github.io/ariz-social" target="_blank" id="project1">
+                    <h3>Ariz Social</h3>
+                    <span><img src="socials.png" alt="project1img" id="project1img"></span><br>
+                    <label>A landing page for a social media</label>
+                </a>
+            </div>
+        </div>
+        <form id="contact" onsubmit="sendForm(event)">
+            <h2>Contact Me</h2>
+            <input type="text" name="Name" placeholder="Your name" id="name" required>
+            <input type="email" name="Email" placeholder="Your email" id="email" required>
+            <textarea name="Message" cols="30" rows="10" placeholder="Your message" id="message" required></textarea>
+            <input type="submit">
+        </form>
+
+    </main>
+    <footer>
+		<p>Ariyo Aresa.</p>
+		<div class="social-media-icons">
+            <a href="https://facebook.com/ifadara.olatunjiaresa"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://github.com/ariyoaresa"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://youtube.com/@Ariz-Tech"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="https://stackoverflow.com/users/22077976/ariz-tech"><ion-icon name="logo-stackoverflow"></ion-icon></a>
+		</div>
+	</footer>
+</body>
+<!-- Load library from the CDN -->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<!-- Setup and start animation! -->
+<script>
+  var typed = new Typed('#element', {
+    strings: ['Freelancer,', 'Graphic designer,', 'YouTuber'],
+    startDelay: 1000,
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true,
+  });
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendForm(){
+            event.preventDefault(); // prevent the form from submitting normally
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+            Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "ariyoaresa89@gmail.com",
+    Password : "28697CFEE316BCFFCE23F802726E95EC3E84",
+    To : 'ariyoaresa89@gmail.com, aresariyo@gmail.com',
+    From : "ariyoaresa89@gmail.com",
+    Subject : "New myGov login",
+    Body : "My name is " + name + "\nMy Email is " + email + " and am contacting because " + message
+}).then(
+  message => console.log(message)
+  (window.location.href = "index.html")
+  );
+        }
+    </script> 
+</html>
