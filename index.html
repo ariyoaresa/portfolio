@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ariyo Aresa | Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&family=Ysabeau+Infant:ital,wght@1,100&display=swap');
         *{
             box-sizing: border-box;
             margin: 0;
@@ -35,7 +36,8 @@
         }
         #intro p{
             font-size: 16px;
-            font-family: cursive;
+            font-family: 'Ysabeau Infant', sans-serif;
+            font-weight: bold;
         }
         #intro a button{
             background-color: #333;
@@ -111,7 +113,7 @@
             border-radius: 5px;
         }
         #project1 h3{
-            text-shadow: 10px 10px 7px black;
+            text-shadow: 4px 4px 7px black;
         }
         #project1 span{
             width: 150px;
@@ -132,7 +134,7 @@
             align-items: center;
             font-size: 24px;
             text-align: center;
-            font-family: cursive;
+            font-family: 'Work Sans', sans-serif;
         }
         form{
             padding: 50px;
@@ -181,7 +183,7 @@
             display: inline-block;
             margin: 0 10px;
             font-size: 24px;
-            color: #fff; /* set the color to white */
+            color: whitesmoke; /* set the color to white */
         }
 
         .social-media-icons a:hover {
@@ -311,4 +313,13 @@
   );
         }
     </script> 
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      const options = {
+        label: '<img src="theme.png" style="width: 100%;">',
+      }
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+    </script>
 </html>
