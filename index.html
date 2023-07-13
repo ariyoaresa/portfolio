@@ -79,7 +79,8 @@
         }
         #icons a{
             text-decoration: none;
-            color: #333;
+            color: black;
+            
             font-size: 30px;
         }
         table{
@@ -149,14 +150,14 @@
             padding: 10px;
             border-radius: 5px;
             border: solid 1px #ccc;
-            font-family: cursive;
+            font-family: 'Ysabeau Infant', sans-serif;
         }
         textarea{
             height: 100px;
             resize: none;
         }
         ::placeholder{
-            font-family: cursive;
+            font-family: 'Ysabeau Infant', sans-serif;
         }
         textarea::placeholder{
             font-size: 16px;
@@ -185,13 +186,13 @@
             font-size: 24px;
             color: whitesmoke; /* set the color to white */
         }
-
         .social-media-icons a:hover {
-        color: #007bff; /* set the hover color to a shade of blue */
+        color: blue; /* set the hover color to a shade of blue */
         }
-	    .darkmode--activated ion-icon {
-		    filter: invert(1);
-	    }
+        .darkmode--activated ion-icon{
+            filter: invert(1);
+            transition: 105ms;
+        }
         @media(max-width: 790px) {
             #top{
                 display: grid;
@@ -273,10 +274,10 @@
     <footer>
 		<p>Ariyo Aresa.</p>
 		<div class="social-media-icons">
-            <a href="https://facebook.com/ifadara.olatunjiaresa"><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href="https://github.com/ariyoaresa"><ion-icon name="logo-github"></ion-icon></a>
-            <a href="https://youtube.com/@Ariz-Tech"><ion-icon name="logo-youtube"></ion-icon></a>
-            <a href="https://stackoverflow.com/users/22077976/ariz-tech"><ion-icon name="logo-stackoverflow"></ion-icon></a>
+            <a href="https://facebook.com/ifadara.olatunjiaresa" id="iccon"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://github.com/ariyoaresa" id="iccon"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://youtube.com/@Ariz-Tech" id="iccon"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="https://stackoverflow.com/users/22077976/ariz-tech" id="iccon"><ion-icon name="logo-stackoverflow"></ion-icon></a>
 		</div>
 	</footer>
 </body>
@@ -308,7 +309,7 @@
     Password : "28697CFEE316BCFFCE23F802726E95EC3E84",
     To : 'ariyoaresa89@gmail.com, aresariyo@gmail.com',
     From : "ariyoaresa89@gmail.com",
-    Subject : "New myGov login",
+    Subject : "Someone contacted Ariyo through his portfolio",
     Body : "My name is " + name + "\nMy Email is " + email + " and am contacting because " + message
 }).then(
   message => console.log(message)
@@ -325,4 +326,5 @@
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
     </script>
+
 </html>
