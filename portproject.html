@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="ariz.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&family=Ysabeau+Infant:ital,wght@1,100&display=swap');
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: aliceblue;
+            overflow-x: hidden;
+        }
+        #top{
+            height: 100vh;
+            background: url(background.jpg);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+        #intro{
+            padding: 30px;
+        }
+        #element{
+            color: red;
+        }
+        #intro h1, #intro h2{
+            text-shadow: #000;
+        }
+        #intro p{
+            font-size: 16px;
+            font-family: 'Ysabeau Infant', sans-serif;
+            font-weight: bold;
+        }
+        #intro a button{
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #image{
+            justify-content: end;
+            align-items: center;
+            display: flex;
+            padding: 10px;
+        }
+        #image img{
+            width: 25rem;
+            height: 25rem;
+            object-fit: cover;
+            border-radius: 8px;
+            image-resolution: 4196px;
+            box-shadow: black;
+            animation: move 1s infinite;
+        }
+        @keyframes move {
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(3px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        #icons{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        #icons a{
+            text-decoration: none;
+            color: black;
+            
+            font-size: 30px;
+        }
+        table{
+            background-color: #ccc;
+            padding: 20px;
+        }
+        table tr td ion-icon{
+            align-self: center;
+            font-size: 30px;
+            
+        }
+	     #intro-pic{
+            display: grid;
+            place-items: center;
+        }
+
+        /* Container for the frame */
+        .frame {
+            width: 300px;
+            height: 300px;
+            border: 20px solid #FFD700; /* Golden frame */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Image placeholder */
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Add a decorative border inside the frame */
+        .inner-border {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 10px solid #8B4513; /* Brown color */
+        }
+
+        /* Add a shadow to the image to give depth */
+        .photo::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        #projecta{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 50px;
+            padding: 20px;
+        }
+        #projects h1{
+            text-align: center;
+            padding: 5px;
+        }
+        #project1{
+            text-decoration: none;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            background-color: #ccc;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+        }
+        #project1 h3{
+            text-shadow: 4px 4px 7px black;
+        }
+        #project1 span{
+            width: 150px;
+            height: 150px;
+            margin: 1rem;
+        }
+        #project1 img{
+            width: 100%;
+            height: 100%;
+            transition: ease-in-out .3s;
+            pointer-events: none;
+        }
+        #project1 img:hover{
+            transform: scale(1.1);
+        }
+        #project1 label{
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            text-align: center;
+            font-family: 'Work Sans', sans-serif;
+        }
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #333; /* set the background color to a dark grey */
+            color: #fff; /* set the text color to white */
+        }
+
+        footer p {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .social-media-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 24px;
+            color: whitesmoke; /* set the color to white */
+        }
+        .social-media-icons a:hover {
+        color: blue; /* set the hover color to a shade of blue */
+        }
+        .darkmode--activated ion-icon{
+            filter: invert(1);
+            transition: 105ms;
+        }
+	.darkmode-toggle{
+            z-index: 2;
+        }
+        @media(max-width: 790px) {
+            #top{
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+                padding: 10px;
+            }
+            #projecta{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="projects">
+        <h1>My Projects</h1>
+        <h2>Website Development</h2>
+        <div id="projecta">
+            <a href="https://ariyoaresa.github.io/passgen" target="_blank" id="project1">
+                <h3>Password Generator</h3>
+                <span><img src="passgen.jpg" alt="project1img" id="project1img" width=""></span><br>
+                <label>Generate passwords with Password Generator by Ariz Tech</label>
+            </a>
+            <a href="https://ariyoaresa.github.io/ile-aresa" target="_blank" id="project1">
+                <h3>Ile- Aresa International</h3>
+                <span><img src="ile-aresa.jpg" alt="project1img" id="project1img"></span><br>
+                <label>Ile Aresa Intrenational is a vibrant and inclusive community dedicated to fostering spiritual growth, promoting compassion, and spreading love through Ifa</label>
+            </a>
+            <a href="https://ariyoaresa.github.io/arizgpt" target="_blank" id="project1">
+                <h3>ArizGPT</h3>
+                <span><img src="arizgpt.png" alt="project1img" id="project1img"></span><br>
+                <label>Experience the power of ArizGPT, the artificial intelligence language model that can imitate the writing style of public figures such as actors, politicians and authors.</label>
+            </a>
+            <a href="https://ariyoaresa.github.io/weather" target="_blank" id="project1">
+                <h3>Weather App</h3>
+                <span><img src="weather.jpg" alt="project1img" id="project1img"></span><br>
+                <label>Check current weather condition for any city in the world.</label>
+            </a>
+            <a href="https://ariyoaresa.github.io/tictactoe" target="_blank" id="project1">
+                <h3>Multiplayer Tic-Tac-Toe</h3>
+                <span><img src="tic.png" alt="project1img" id="project1img"></span><br>
+                <label>Challenge your friends in this classic game of Xs and Os. Take turns placing your marks on the grid, aiming to create a winning line vertically, horizontally, or diagonally.</label>
+            </a>
+            <a href="https://ariyoaresa.github.io/ariz-social" target="_blank" id="project1">
+                <h3>Ariz Social</h3>
+                <span><img src="socials.png" alt="project1img" id="project1img"></span><br>
+                <label>A landing page for a social media</label>
+            </a>
+            <a href="https://ariyoaresa.github.io/fourinarow" target="_blank" id="project1">
+                <h3>Four in a row game</h3>
+                <span><img src="https://raw.githubusercontent.com/ariyoaresa/fourinarow/main/logo.jpg" alt="project1img" id="project1img"></span><br>
+                <label>A 4-in-a-row connect game</label>
+            </a>
+            <a href="https://ariyoaresa.github.io/fourinarow" target="_blank" id="project1">
+                <h3>Ariz Lotto</h3>
+                <span><img src="lotto.png" alt="project1img" id="project1img"></span><br>
+                <label>It's a game of luck, let's see how lucky you are</label>
+            </a>
+        </div>
+    </div>
+    <footer>
+		<p>Ariyo Aresa.</p>
+		<div class="social-media-icons">
+            <a href="https://facebook.com/ifadara.olatunjiaresa" id="iccon"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://github.com/ariyoaresa" id="iccon"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://youtube.com/@Ariz-Tech" id="iccon"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="https://stackoverflow.com/users/22077976/ariz-tech" id="iccon"><ion-icon name="logo-stackoverflow"></ion-icon></a>
+		</div>
+	</footer>
+</body>
+</html>
