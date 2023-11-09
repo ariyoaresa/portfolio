@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +36,7 @@
         #intro h1, #intro h2{
             text-shadow: #000;
         }
+        
         #intro p{
             font-size: 16px;
             font-family: 'Ysabeau Infant', sans-serif;
@@ -43,10 +45,14 @@
         #intro a button{
             background-color: #333;
             color: #fff;
-            padding: 5px;
+            padding: 14px;
             border-radius: 5px;
+            font-size: 15px;
             cursor: pointer;
             margin-top: 10px;
+        }
+        #intro a button:hover{
+            border-color: #618b13;
         }
         #image{
             justify-content: end;
@@ -146,6 +152,9 @@
             text-align: center;
             padding: 5px;
         }
+        #projects h2, #achievements h2{
+            padding: 9px;
+        }
         #project1{
             text-decoration: none;
             color: #000;
@@ -180,6 +189,22 @@
             font-size: 24px;
             text-align: center;
             font-family: 'Work Sans', sans-serif;
+        }
+        #achievedicon{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        #mlh{
+            background-color: #ccc;
+            border-radius: 7px;
+            padding: 19px;
+            display: grid; 
+            grid-row: repeat(1, 4fr);
+            grid-gap: 30px;
+            place-items: center;
+        }
+        #achievements img{
+            width: 70px;
         }
         form{
             padding: 50px;
@@ -236,6 +261,9 @@
         .darkmode--activated ion-icon{
             filter: invert(1);
             transition: 105ms;
+        }
+        .darkmode--activated #intro a button{
+            background-color: black;
         }
 	.darkmode-toggle{
             z-index: 2;
@@ -315,6 +343,27 @@
                     <label>A landing page for a social media</label>
                 </a>
             </div>
+        </div>
+        <div id="achievements">
+            <h2>Achievements</h2>
+            <div id="achievedicon">
+            <div id="mlh">
+                <img src="https://github.githubassets.com/images/modules/profile/achievements/pull-shark-default.png" alt="Github Pull shark image">
+                <p>Achieved after @ariyoaresa opened 16 pull requests that have been merged.</p>
+            </div>
+            <div id="mlh">
+                <img src="https://assets.holopin.io/hf2023levels/blue-helmet-ducky-flippers-swarm.webp" alt="Ariyoaresa's Avatar from hacktoberfest Hall of Fame">
+                <p>Achieved after @ariyoaresa made it to the Hacktoberfest 2023 Hall of Fame</p>
+            </div>
+            <div id="mlh">
+                <img src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbG5leHg3dmUyMTcxOTN6amp0c2lvNXZqIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=" alt="Ariyoaresa's Avatar from hacktoberfest Hall of Fame">
+                <p>Awarded by Major League Hacking (MLH)</p>
+            </div>
+            <div id="mlh">
+                <img src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbG16YzVpdWYxMDA0ODBma3V6dTBxYnpxOCIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbH19" alt="Ariyoaresa's Avatar from hacktoberfest Hall of Fame">
+                <p>A surprise from DigitalOcean for Hacktoberfest participants</p>
+            </div>
+        </div>
         </div>
         <form id="contact" onsubmit="sendForm(event)">
             <h2>Contact Me</h2>
