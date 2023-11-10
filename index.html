@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +37,7 @@
         #intro h1, #intro h2{
             text-shadow: #000;
         }
+        
         #intro p{
             font-size: 16px;
             font-family: 'Ysabeau Infant', sans-serif;
@@ -43,10 +46,14 @@
         #intro a button{
             background-color: #333;
             color: #fff;
-            padding: 5px;
+            padding: 14px;
             border-radius: 5px;
+            font-size: 15px;
             cursor: pointer;
             margin-top: 10px;
+        }
+        #intro a button:hover{
+            border-color: #618b13;
         }
         #image{
             justify-content: end;
@@ -146,6 +153,9 @@
             text-align: center;
             padding: 5px;
         }
+        #projects h2, #achievements h2{
+            padding: 9px;
+        }
         #project1{
             text-decoration: none;
             color: #000;
@@ -181,17 +191,16 @@
             text-align: center;
             font-family: 'Work Sans', sans-serif;
         }
-	#achievedicon{
+        #achievedicon{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
         }
         #mlh{
             background-color: #ccc;
             border-radius: 7px;
             padding: 19px;
-            display: grid; 
-            grid-row: repeat(1, 4fr);
-            grid-gap: 30px;
+            display: grid;
             place-items: center;
         }
         #achievements img{
@@ -253,6 +262,9 @@
             filter: invert(1);
             transition: 105ms;
         }
+        .darkmode--activated #intro a button{
+            background-color: black;
+        }
 	.darkmode-toggle{
             z-index: 2;
         }
@@ -267,15 +279,10 @@
                 display: flex;
                 flex-direction: column;
             }
-	    #mlh{
-            background-color: #ccc;
-            border-radius: 7px;
-            padding: 19px;
-            display: grid; 
-            grid-row: repeat(1, 2fr);
-            grid-gap: 30px;
-            place-items: center;
-        }
+            #achievedicon{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
